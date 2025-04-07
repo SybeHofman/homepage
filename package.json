@@ -1,9 +1,9 @@
 {
-  "name": "sybehofman.github.io",
+  "name": "sybe-hofman-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://sybehofman.github.io",
+  "homepage": "http://sybehofman.github.io/sybe-hofman-portfolio",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
