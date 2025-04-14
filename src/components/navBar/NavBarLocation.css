@@ -1,0 +1,11 @@
+.navbar-location{
+    margin: 10px;
+    font-weight: bold;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+
+    /*Overriding agent*/
+    color: black;
+    text-decoration: none;
+}
