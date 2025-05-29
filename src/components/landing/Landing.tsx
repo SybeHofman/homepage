@@ -1,7 +1,7 @@
 import "./Landing.css";
 import { useState, useEffect, useRef } from "react";
 import Intro from "./Intro";
-import NavBar from "../navBar/Navbar";
+import NavBar from "../navBar/NavBar";
 function Landing() {
     //TODO: remove animation for redirects
     const [inIntro, setInIntro] = useState<Boolean>(true);
