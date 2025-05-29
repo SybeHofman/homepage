@@ -1,0 +1,16 @@
+.landing{
+    background-color: black;
+    color: #89ff69;
+    height: 100vh;
+}
+
+.wrapper{
+    display: flex;
+}
+
+.center{
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}

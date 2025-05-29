@@ -1,17 +1,19 @@
-import NavBarLocation from "./NavBarLocation"
-import logo from "../../assets/logo.svg"
 import "./NavBar.css";
 
 function NavBar() {
     return(
-        <nav className="navbar">
-            <a href="/homepage/">
-                <img alt="Logo" className="logo" src={logo}></img>
+        <nav>
+            <a href = "https://sybehofman.github.io/homepage/">
+                <div className="nav-contents homepage-icon">SH</div>
             </a>
-            <NavBarLocation content="About" href="/about/"/>
-            <NavBarLocation content="Contacts" href="/contacts/"/>
+            <a href = "https://sybehofman.github.io/about/">
+                <div className="nav-contents about">ABOUT</div>
+            </a>
+            <a href = "https://sybehofman.github.io/contacts/">
+                <div className="nav-contents contacts">CONTACTS</div>
+            </a>
         </nav>
-    );
+    )
 }
 
 export default NavBar;

@@ -1,9 +1,11 @@
-import NavBar from "./navBar/NavBar.tsx";
+import Landing from "./landing/Landing.tsx";
 import "./App.css"
 
 function App() {
   return(
-    <NavBar/>
+    <div className = "app">
+      <Landing/>
+    </div>
   );
 }
 

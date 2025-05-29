@@ -1,0 +1,22 @@
+.cursor {
+    display: inline-block;
+    width: 0.5px;
+    height: 1em;
+    background-color: black;
+    animation: blink 1s steps(2, start) infinite;
+    vertical-align: bottom;
+    background-color: #89ff69;
+    margin: 2px;
+}
+
+.cursor-text {
+    display: inline;
+    font-size: 3em;
+    white-space: pre;
+}
+  
+@keyframes blink {
+    to {
+        visibility: hidden; 
+    }
+}
