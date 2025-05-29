@@ -2,69 +2,57 @@ import "./Landing.css";
 import { useState, useEffect, useRef } from "react";
 import Intro from "./Intro";
 import NavBar from "../navBar/NavBar";
+
 function Landing() {
     //TODO: remove animation for redirects
     const [inIntro, setInIntro] = useState<Boolean>(true);
-    const [displayed, setDisplayed] = useState('');
+    const [index, setIndex] = useState(0);
 
-    const text = "C:\\CoolGuys> cd Syeb-w-w-w-w-w-w-d-dbe Hofman"
+    const text = "C:\\CoolGuys> cd Syeb-w-d-dbe Hofman"
     const speed = 200;
 
-    const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+    const getIntroText = (i: number) => {
+        let s = "";
+        for(let j = 0; j <= i; j++){
+            if(text.charAt(j) === '-'){
+                if(text.charAt(j + 1) === 'w'){
+                    j++;
+                }
+                else if(text.charAt(j + 1) === 'd'){
+                    s = s.slice(0, -1);
+                    j++;
+                }
+            } else{
+                s += text.charAt(j);
+            }
+        }
+        return s;
+    }
 
     useEffect(() => {
-        // Clear any previous interval before setting a new one
-        if (intervalRef.current) {
-            clearInterval(intervalRef.current);
+        if (!inIntro) return;
+
+        if (index < text.length) {
+            const intervalId = setInterval(() => {
+                setIndex((prev) => prev + 1);
+            }, speed);
+
+            return () => clearInterval(intervalId);
+        } else {
+            // Animation finished, show NavBar after a short delay (optional)
+            const timeoutId = setTimeout(() => setInIntro(false), 500);
+            return () => clearTimeout(timeoutId);
         }
-
-        let index = 0;
-
-        const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
-
-
-        intervalRef.current = setInterval(async () => {
-            if (index >= text.length) {
-                clearInterval(intervalRef.current!);
-                intervalRef.current = null;
-                await sleep(1000);
-                setInIntro(false);
-                return;
-            }
-
-            const currentChar = text[index];
-
-            //ESCAPE SEQUENCES
-            if(currentChar === '-'){
-                if(text[index + 1] === 'd'){
-                    setDisplayed((prev) => prev.slice(0, -1));
-                    index++;
-                }
-
-                else if(text[index + 1] === 'w'){
-                    index++;
-                }
-            }
-            else setDisplayed((prev) => prev + currentChar);
-            index++;
-        }, speed);
-
-        return () => {
-            if (intervalRef.current) {
-                clearInterval(intervalRef.current);
-                intervalRef.current = null;
-            }
-        };
-    }, [text, speed]);
+    }, [index, inIntro, text.length, speed]);
 
 
 
     return(
         <div className="landing">
-            { inIntro ? <Intro text = {displayed} /> : null}
-            {!inIntro ?
-            <NavBar></NavBar>
-            
+            {inIntro ? <Intro text = {getIntroText(index)} /> : null}
+            {!inIntro ? <div className = "homepage">
+                <NavBar></NavBar>
+            </div>
             : null
             }
         </div>
