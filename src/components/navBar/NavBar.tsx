@@ -3,14 +3,19 @@ import "./NavBar.css";
 function NavBar() {
     return(
         <nav>
-            <a href = "https://sybehofman.github.io/homepage/">
-                <div className="nav-contents homepage-icon">SH</div>
+            
+            <span className="nav-contents homepage-icon">SH</span>
+    
+            <a href = "#about">
+                <span className="nav-contents about">ABOUT</span>
             </a>
-            <a href = "https://sybehofman.github.io/about/">
-                <div className="nav-contents about">ABOUT</div>
+            |
+            <a href = "#projects">
+                <span className="nav-contents projects">PROJECTS</span>
             </a>
-            <a href = "https://sybehofman.github.io/contacts/">
-                <div className="nav-contents contacts">CONTACTS</div>
+            |
+            <a href = "#contacts">
+                <span className="nav-contents contacts">CONTACTS</span>
             </a>
         </nav>
     )

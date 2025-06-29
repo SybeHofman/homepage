@@ -1,5 +1,5 @@
 import "./Landing.css";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Intro from "./Intro";
 import NavBar from "../navBar/NavBar";
 
@@ -50,8 +50,12 @@ function Landing() {
     return(
         <div className="landing">
             {inIntro ? <Intro text = {getIntroText(index)} /> : null}
-            {!inIntro ? <div className = "homepage">
+            {!inIntro ? 
+            <div className = "homepage">
                 <NavBar></NavBar>
+                <div id="about"></div>
+                <div id="projects"></div>
+                <div id="contacts"></div>
             </div>
             : null
             }

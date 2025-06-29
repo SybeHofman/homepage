@@ -1,9 +1,9 @@
 nav{
     font-size: 2em;
     display: flex;
-    border-bottom: 1px solid #89ff69;
     position: fixed;
     width: 100%;
+    align-items: center;
 }
 
 .nav-contents{
@@ -11,6 +11,5 @@ nav{
 }
 
 .homepage-icon{
-    border: 1px solid #89ff69;
-    border-bottom: none;
+    border: 1px solid;
 }
