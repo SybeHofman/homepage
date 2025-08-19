@@ -12,7 +12,26 @@
 .cursor-text {
     display: inline;
     font-size: 3em;
-    white-space: pre;
+    white-space: normal;
+    word-break: break-word;
+}
+
+.intro{
+    background-color: black;
+    height: 100vh;
+}
+
+.wrapper{
+    display: flex;
+}
+.content a{
+    text-decoration:underline;
+}
+.center{
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
   
 @keyframes blink {
