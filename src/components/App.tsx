@@ -10,10 +10,11 @@ function App() {
       {inIntro ? <Intro inIntro = {inIntro} setInIntro = {setInIntro}/> :
       <div className = "homepage">
           <NavBar></NavBar>
+          
           <div className="content" id="about">
-            <h1>ABOUT ME</h1>
+            <h1>Sybe Hofman</h1>
             <ul>
-              <li>I am a high schoolstudent at North Creek High School</li>
+              <li>I am a high school student at North Creek High School</li>
               <li>I am a discus thrower</li>
               <li>I am a programmer</li>
             </ul>
