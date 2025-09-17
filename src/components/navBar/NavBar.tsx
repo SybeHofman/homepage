@@ -10,7 +10,7 @@ function NavBar() {
                 <span className="nav-contents about">ABOUT</span>
             </a>
             |
-            <a href = "#projects">
+            <a href = "https://sybehofman.github.io/projects/">
                 <span className="nav-contents projects">PROJECTS</span>
             </a>
             |

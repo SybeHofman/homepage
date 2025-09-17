@@ -22,7 +22,7 @@ function App() {
           </div>
           <div className="content" id="projects">
             <h1>PROJECTS</h1>
-            <div>Will update in the future</div>
+            <a href="https://sybehofman.github.io/projects/">https://sybehofman.github.io/projects/</a>
           </div>
           <div className="content" id="contacts">
             <h1>CONTACTS</h1>
