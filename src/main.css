@@ -1,8 +1,10 @@
-body{
-    margin: 0px;
-    font-family: Helvetica;
-}
+body {
+  margin: 0px;
+  font-family: monospace;
 
-a{
-    display: flex;
+  min-height: 100dvh;
+  min-width: 100dvw;
+
+  background-color: black;
+  color: rgb(255, 166, 0);
 }
